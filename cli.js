@@ -5,6 +5,8 @@ var pkg = require('./package.json');
 var statsministerietSpeeches = require('./');
 var argv = process.argv.slice(2);
 
+var fs = require('fs');
+
 function help() {
   console.log([
     '',
@@ -29,4 +31,5 @@ if (argv.indexOf('--version') !== -1) {
 
 statsministerietSpeeches(argv[0], function(err, data){
   console.log(JSON.stringify(data, null, 4));
+    fs.writeFile('speech.md', data.markdown, function(){});
 });
