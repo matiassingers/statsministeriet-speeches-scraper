@@ -17,9 +17,7 @@ module.exports = function(id, callback) {
     var meta = $('meta[name="created"]');
     var speech = $('.maininner.maininner-page');
 
-    var title = speech.find('h1').text();
-    // 'Statsminister '.length => 14
-    var primeMinister = title.substring(14, title.indexOf('s nytårstale'));
+    var primeMinister = $('.breadcrum').find('a').eq(4).text();
 
     speech.find('h1').remove();
     speech.find('.nedtonet').remove();
