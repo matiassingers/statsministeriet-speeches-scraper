@@ -16,12 +16,6 @@ module.exports = function(id, callback) {
     speech.find('h1').remove();
     speech.find('.nedtonet').remove();
 
-    var data = {
-      source: url,
-      date: meta.attr('content'),
-      html: speech.html(),
-      markdown: md(speech.html(), {inline: true}).replace(/\\/gi, '')
-    };
     var image = speech.find('.a110051').find('img').attr('src');
     if(image){
       speech.find('.a110051').remove();
@@ -33,12 +27,19 @@ module.exports = function(id, callback) {
       var link = linkElement.attr('onclick').split('\'')[1];
       linkElement.attr('href', link);
 
-      data.video = link;
-
       speech.children().last().remove();
       speech.children().last().remove();
       speech.children().last().remove();
     }
+
+    var data = {
+      source: url,
+      date: meta.attr('content'),
+      rawHtml: speech.html(),
+      markdown: md(speech.html(), {inline: true}).replace(/\\/gi, ''),
+      image: image,
+      video: link
+    };
 
     callback(null, data)
   });
