@@ -27,6 +27,6 @@ if (argv.indexOf('--version') !== -1) {
 }
 
 
-statsministerietSpeeches(argv[0], function(){
-
+statsministerietSpeeches(argv[0], function(err, data){
+  console.log(JSON.stringify(data, null, 4));
 });
