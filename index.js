@@ -16,20 +16,25 @@ module.exports = function(id, callback) {
     speech.find('h1').remove();
     speech.find('.nedtonet').remove();
 
-    var linkElement = speech.find('a[onclick]');
-    var link = linkElement.attr('onclick').split('\'')[1];
-    linkElement.attr('href', link);
-
-    speech.children().last().remove();
-    speech.children().last().remove();
-    speech.children().last().remove();
-
-    callback(null, {
+    var data = {
       source: url,
-      video: link,
       date: meta.attr('content'),
       html: speech.html(),
       markdown: md(speech.html(), {inline: true}).replace(/\\/gi, '')
-    })
+    };
+
+    var linkElement = speech.find('a[onclick]');
+    if(linkElement.length){
+      var link = linkElement.attr('onclick').split('\'')[1];
+      linkElement.attr('href', link);
+
+      data.video = link;
+
+      speech.children().last().remove();
+      speech.children().last().remove();
+      speech.children().last().remove();
+    }
+
+    callback(null, data)
   });
 };
