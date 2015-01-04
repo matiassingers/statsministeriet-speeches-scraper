@@ -15,6 +15,8 @@ module.exports = function(id, callback) {
 
     speech.find('h1').remove();
     speech.find('.nedtonet').remove();
+    speech.find('p i').parent().remove();
+    speech.find('i').remove();
 
     var image = speech.find('.a110051').find('img').attr('src');
     if(image){
