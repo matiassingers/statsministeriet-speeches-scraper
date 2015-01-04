@@ -17,6 +17,10 @@ module.exports = function(id, callback) {
     var meta = $('meta[name="created"]');
     var speech = $('.maininner.maininner-page');
 
+    var title = speech.find('h1').text();
+    // 'Statsminister '.length => 14
+    var primeMinister = title.substring(14, title.indexOf('s nytårstale'));
+
     speech.find('h1').remove();
     speech.find('.nedtonet').remove();
     speech.find('p i').parent().remove();
@@ -44,7 +48,8 @@ module.exports = function(id, callback) {
       rawHtml: speech.html(),
       markdown: md(speech.html(), {inline: true}).replace(/\\/gi, ''),
       image: image,
-      video: link
+      video: link,
+      speaker: primeMinister
     };
 
     callback(null, data)
