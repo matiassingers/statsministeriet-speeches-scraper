@@ -31,7 +31,7 @@ if (argv.indexOf('--version') !== -1) {
 
 statsministerietSpeeches(argv[0], function(err, data){
   if(!err){
-    fs.writeFile('speech.md', data.markdown, function(){});
+    fs.writeFile('index.md', data.markdown, function(){});
 
     console.log(JSON.stringify(data, null, 4));
   }
