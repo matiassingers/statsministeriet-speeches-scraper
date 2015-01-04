@@ -1,17 +1,17 @@
-# statsministeriet-speeches [![Build Status](http://img.shields.io/travis/matiassingers/statsministeriet-speeches.svg?style=flat-square)](https://travis-ci.org/matiassingers/statsministeriet-speeches) [![Dependency Status](http://img.shields.io/gemnasium/matiassingers/statsministeriet-speeches.svg?style=flat-square)](https://gemnasium.com/matiassingers/statsministeriet-speeches)
+# statsministeriet-speeches-scraper [![Build Status](http://img.shields.io/travis/matiassingers/statsministeriet-speeches-scraper.svg?style=flat-square)](https://travis-ci.org/matiassingers/statsministeriet-speeches-scraper) [![Dependency Status](http://img.shields.io/gemnasium/matiassingers/statsministeriet-speeches-scraper.svg?style=flat-square)](https://gemnasium.com/matiassingers/statsministeriet-speeches-scraper)
 > scrape speeches from the Danish Interior Ministry website
 
 ## Install
 
 ```sh
-$ npm install --save statsministeriet-speeches
+$ npm install --save statsministeriet-speeches-scraper
 ```
 
 
 ## Usage
 
 ```js
-var statsministerietSpeeches = require('statsministeriet-speeches');
+var statsministerietSpeeches = require('statsministeriet-speeches-scraper');
 
 statsministerietSpeeches()
 
@@ -21,14 +21,14 @@ statsministerietSpeeches()
 ## CLI
 
 ```sh
-$ npm install --global statsministeriet-speeches
+$ npm install --global statsministeriet-speeches-scraper
 ```
 
 ```sh
-$ statsministeriet-speeches --help
+$ statsministeriet-speeches-scraper --help
 
   Example
-    statsministeriet-speeches
+    statsministeriet-speeches-scraper
     
 ```
 

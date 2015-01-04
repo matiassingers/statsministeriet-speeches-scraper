@@ -1,5 +1,5 @@
 {
-  "name": "statsministeriet-speeches",
+  "name": "statsministeriet-speeches-scraper",
   "version": "0.1.0",
   "description": "scrape speeches from the Danish Interior Ministry website",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "node": ">=0.10.0"
   },
   "bin": {
-    "statsministeriet-speeches": "cli.js"
+    "statsministeriet-speeches-scraper": "cli.js"
   },
   "files": [
     "index.js",
@@ -18,14 +18,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/matiassingers/statsministeriet-speeches"
+    "url": "https://github.com/matiassingers/statsministeriet-speeches-scraper"
   },
   "author": "Matias Singers <mail@matiassingers.com> (http://mts.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matiassingers/statsministeriet-speeches/issues"
+    "url": "https://github.com/matiassingers/statsministeriet-speeches-scraper/issues"
   },
-  "homepage": "https://github.com/matiassingers/statsministeriet-speeches",
+  "homepage": "https://github.com/matiassingers/statsministeriet-speeches-scraper",
   "dependencies": {
     "cheerio": "0.18.0",
     "got": "2.2.0",
