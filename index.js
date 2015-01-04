@@ -5,6 +5,10 @@ var cheerio = require('cheerio');
 var md = require('html-md');
 
 module.exports = function(id, callback) {
+  if(!id){
+    throw callback('ID is required');
+  }
+
   var url = 'http://www.stm.dk/_p_' + id + '.html';
 
   got(url, function(err, data){
