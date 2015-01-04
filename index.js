@@ -22,6 +22,11 @@ module.exports = function(id, callback) {
       html: speech.html(),
       markdown: md(speech.html(), {inline: true}).replace(/\\/gi, '')
     };
+    var image = speech.find('.a110051').find('img').attr('src');
+    if(image){
+      speech.find('.a110051').remove();
+      image = 'http://www.stm.dk/' + image;
+    }
 
     var linkElement = speech.find('a[onclick]');
     if(linkElement.length){
