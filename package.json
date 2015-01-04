@@ -26,7 +26,11 @@
     "url": "https://github.com/matiassingers/statsministeriet-speeches/issues"
   },
   "homepage": "https://github.com/matiassingers/statsministeriet-speeches",
-  "dependencies": {},
+  "dependencies": {
+    "cheerio": "0.18.0",
+    "got": "2.2.0",
+    "html-md": "3.0.2"
+  },
   "devDependencies": {
     "mocha": "*"
   }
